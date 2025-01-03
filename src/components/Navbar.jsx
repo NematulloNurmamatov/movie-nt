@@ -140,16 +140,16 @@ export default function Navbar() {
                         <img className="w-[140px]" src={logo} alt="Logo" />
                         <div className="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
                             <Dropdown menu={{ items: filmItems }} placement="bottom" arrow={{ pointAtCenter: true }}>
-                                <Button className="mr-3 bg-gray-800 text-white hover:!bg-gray-800">Filmlar</Button>
+                                <Button className="mr-3 bg-[#032541] text-white hover:!bg-gray-800">Filmlar</Button>
                             </Dropdown>
                             <Dropdown menu={{ items: tvItems }} placement="bottom" arrow={{ pointAtCenter: true }}>
-                                <Button className="mr-3 bg-gray-800 text-white hover:!bg-gray-800">Teleko'rsatuvlar</Button>
+                                <Button className="mr-3 bg-[#032541] text-white hover:!bg-gray-800">Teleko'rsatuvlar</Button>
                             </Dropdown>
                             <Dropdown menu={{ items: personItems }} placement="bottom" arrow={{ pointAtCenter: true }}>
-                                <Button className="mr-3 bg-gray-800 text-white hover:!bg-gray-800">Kishilar</Button>
+                                <Button className="mr-3 bg-[#032541] text-white hover:!bg-gray-800">Kishilar</Button>
                             </Dropdown>
                             <Dropdown menu={{ items: moreItems }} placement="bottom" arrow={{ pointAtCenter: true }}>
-                                <Button className="bg-gray-800 text-white hover:!bg-gray-800">Yana</Button>
+                                <Button className="bg-[#032541] text-white hover:!bg-gray-800">Yana</Button>
                             </Dropdown>
                             {/* <Popover placement="bottom" title={text} content={content}>
                                 <Button>Bottom</Button>
