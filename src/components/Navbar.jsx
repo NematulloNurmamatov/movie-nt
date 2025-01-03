@@ -134,7 +134,7 @@ export default function Navbar() {
 
     return (
         <div>
-            <nav className="border-gray-200 bg-gray-50 dark:bg-gray-800">
+            <nav className="border-gray-200 bg-[#032541]">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <div className="flex gap-10">
                         <img className="w-[140px]" src={logo} alt="Logo" />
