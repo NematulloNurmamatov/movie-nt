@@ -79,7 +79,7 @@ export default function Home() {
                             placeholder="Film, telekorsatuvlar, kishi va hk lar..."
                             className="px-4 py-2 bg-white text-black rounded-l-md w-full"
                         />
-                        <button className="px-4 py-2 bg-blue-500 text-white rounded-r-md">
+                        <button className="px-4 py-2 text-white rounded-r-md bg-gradient-to-r from-[#032541] to-[#1D4ED8]">
                             Search
                         </button>
                     </div>
@@ -350,7 +350,7 @@ export default function Home() {
                                     <div>
                                         <Avatar size="large" src="https://i.pinimg.com/736x/e7/1e/ed/e71eed228bdb81e9b08fdf6b55c81191.jpg" />
                                     </div>
-                                    <div className="w-full"> 
+                                    <div className="w-full">
                                         <p className="mb-[-10px]">Shei</p>
                                         <Progress percent={39.9} strokeColor={twoColors2} />
                                         <Progress percent={79.9} strokeColor={twoColors} />
@@ -360,7 +360,7 @@ export default function Home() {
                                     <div>
                                         <Avatar size="large" src="https://media.istockphoto.com/id/811339568/photo/student-walking-learning-with-audio-lessons.jpg?s=612x612&w=0&k=20&c=JmWSpYNfSX9etdZYcH1IVH91a9dKSaNOasnswHlcCYk=" />
                                     </div>
-                                    <div className="w-full"> 
+                                    <div className="w-full">
                                         <p className="mb-[-10px]">Gargots</p>
                                         <Progress percent={40.9} strokeColor={twoColors2} />
                                         <Progress percent={99} strokeColor={twoColors} />
@@ -368,9 +368,9 @@ export default function Home() {
                                 </div>
                                 <div className="flex items-center gap-4 w-full mb-4">
                                     <div>
-                                        <Avatar size="large"  icon={<UserOutlined />}  />
+                                        <Avatar size="large" icon={<UserOutlined />} />
                                     </div>
-                                    <div className="w-full"> 
+                                    <div className="w-full">
                                         <p className="mb-[-10px]">Samara
                                         </p>
                                         <Progress percent={79.9} strokeColor={twoColors2} />
@@ -392,7 +392,7 @@ export default function Home() {
                                     <div>
                                         <Avatar size="large" src="https://images-ng.pixai.art/images/thumb/87a9997f-c3f2-4869-ba37-6ef1b70c2177" />
                                     </div>
-                                    <div className="w-full"> 
+                                    <div className="w-full">
                                         <p className="mb-[-10px]">David
 
                                         </p>
@@ -406,7 +406,7 @@ export default function Home() {
                                     <div>
                                         <Avatar size="large" src="https://media.istockphoto.com/id/1438969575/photo/smiling-young-male-college-student-wearing-headphones-standing-in-a-classroom.jpg?s=612x612&w=0&k=20&c=yNawJP9JGXU6LOL262ME5M1U2xxNKQsvT7F9DZhZCh4=" />
                                     </div>
-                                    <div className="w-full"> 
+                                    <div className="w-full">
                                         <p className="mb-[-10px]">heli5m</p>
                                         <Progress percent={39.9} strokeColor={twoColors2} />
                                         <Progress percent={56} strokeColor={twoColors} />
@@ -416,7 +416,7 @@ export default function Home() {
                                     <div>
                                         <Avatar size="large" icon={<UserOutlined />} />
                                     </div>
-                                    <div className="w-full"> 
+                                    <div className="w-full">
                                         <p className="mb-[-10px]">talestalker
                                         </p>
                                         <Progress percent={40.9} strokeColor={twoColors2} />
@@ -427,7 +427,7 @@ export default function Home() {
                                     <div>
                                         <Avatar size="large" src="https://img.freepik.com/free-photo/beautiful-anime-character-cartoon-scene_23-2151035156.jpg" />
                                     </div>
-                                    <div className="w-full"> 
+                                    <div className="w-full">
                                         <p className="mb-[-10px]">mrsunkeeper</p>
                                         <Progress percent={85.9} strokeColor={twoColors2} />
                                         <Progress percent={75.9} strokeColor={twoColors} />
@@ -437,7 +437,7 @@ export default function Home() {
                                     <div>
                                         <Avatar size="large" icon={<UserOutlined />} />
                                     </div>
-                                    <div className="w-full"> 
+                                    <div className="w-full">
                                         <p className="mb-[-10px]">chkchkboom
                                         </p>
                                         <Progress percent={79.9} strokeColor={twoColors2} />
@@ -448,7 +448,7 @@ export default function Home() {
                                     <div>
                                         <Avatar size="large" icon={<UserOutlined />} />
                                     </div>
-                                    <div className="w-full"> 
+                                    <div className="w-full">
                                         <p className="mb-[-10px]">capricorn ✨</p>
                                         <Progress percent={59.9} strokeColor={twoColors2} />
                                         <Progress percent={79.9} strokeColor={twoColors} />
