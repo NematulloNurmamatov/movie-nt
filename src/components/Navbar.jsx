@@ -3,6 +3,8 @@ import logo from '../assets/images/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6
 import { Dropdown, Button } from 'antd';
 import { FaPlus } from 'react-icons/fa6';
 import { SearchOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
+import TaniqliKishilar from '../pages/People/TaniqliKishilar';
 
 // import { Button, Popover } from 'antd';
 
@@ -20,9 +22,9 @@ export default function Navbar() {
         {
             key: '1',
             label: (
-                <a target="_blank" rel="noopener noreferrer" href="https://www.example.com">
+                <Link >
                     Popular
-                </a>
+                </Link>
             ),
         },
         {
@@ -90,9 +92,9 @@ export default function Navbar() {
         {
             key: '1',
             label: (
-                <a target="_blank" rel="noopener noreferrer" href="https://www.example.com">
+                <Link to={"/taniqliKishilar"}>
                     Taniqli kishilar
-                </a>
+                </Link>
             ),
         }
     ];
@@ -137,7 +139,9 @@ export default function Navbar() {
             <nav className="border-gray-200 bg-[#032541]">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <div className="flex gap-10">
-                        <img className="w-[140px]" src={logo} alt="Logo" />
+                        <Link to={"/"}>
+                            <img className="w-[140px]" src={logo} alt="Logo" />
+                        </Link>
                         <div className="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
                             <Dropdown menu={{ items: filmItems }} placement="bottom" arrow={{ pointAtCenter: true }}>
                                 <Button className="mr-3 bg-[#032541] text-white hover:!bg-gray-800">Filmlar</Button>
@@ -161,7 +165,7 @@ export default function Navbar() {
                         <button className=' cursor border px-[4px] py-[1px] rounded hover:bg-white hover:text-gray-800 transition'>UZ</button>
                         <h1 className=' cursor '>Kirish</h1>
                         <h1 className=' cursor '>TMDBga qoʻshiling</h1>
-                        <SearchOutlined  className=' cursor text-[25px] text-white' />
+                        <SearchOutlined className=' cursor text-[25px] text-white' />
                     </div>
                 </div>
             </nav>
