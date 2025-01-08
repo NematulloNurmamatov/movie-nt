@@ -22,7 +22,7 @@ export default function Navbar() {
         {
             key: '1',
             label: (
-                <Link >
+                <Link to={"movie/popular"}>
                     Popular
                 </Link>
             ),
@@ -30,25 +30,25 @@ export default function Navbar() {
         {
             key: '2',
             label: (
-                <a target="_blank" rel="noopener noreferrer" href="https://www.example.com">
+                <Link to={"movie/now_playing"}>
                     Now playing
-                </a>
+                </Link>
             ),
         },
         {
             key: '3',
             label: (
-                <a target="_blank" rel="noopener noreferrer" href="https://www.example.com">
+                <Link to={"movie/upcoming"}>
                     Up coming
-                </a>
+                </Link>
             ),
         },
         {
             key: '4',
             label: (
-                <a target="_blank" rel="noopener noreferrer" href="https://www.example.com">
+                <Link to={"movie/top_rated"}>
                     Top rated
-                </a>
+                </Link>
             ),
         },
     ];
@@ -57,33 +57,33 @@ export default function Navbar() {
         {
             key: '1',
             label: (
-                <a target="_blank" rel="noopener noreferrer" href="https://www.example.com">
+                <Link to={"tv/popular"}>
                     Popular
-                </a>
+                </Link>
             ),
         },
         {
             key: '2',
             label: (
-                <a target="_blank" rel="noopener noreferrer" href="https://www.example.com">
-                    Airing today
-                </a>
+                <Link to={"tv/airing_today"}>
+                    Now playing
+                </Link>
             ),
         },
         {
             key: '3',
             label: (
-                <a target="_blank" rel="noopener noreferrer" href="https://www.example.com">
-                    On TV
-                </a>
+                <Link to={"tv/on_the_air"}>
+                    Up coming
+                </Link>
             ),
         },
         {
             key: '4',
             label: (
-                <a target="_blank" rel="noopener noreferrer" href="https://www.example.com">
+                <Link to={"tv/top_rated"}>
                     Top rated
-                </a>
+                </Link>
             ),
         },
     ];
@@ -144,21 +144,19 @@ export default function Navbar() {
                         </Link>
                         <div className="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
                             <Dropdown menu={{ items: filmItems }} placement="bottom" arrow={{ pointAtCenter: true }}>
-                                <Button className="mr-3 bg-[#032541] text-white hover:!bg-gray-800">Filmlar</Button>
+                                <Button className="mr-3 bg-[#032541] text-white hover:!bg-[#032541] !border-none">Movies</Button>
                             </Dropdown>
                             <Dropdown menu={{ items: tvItems }} placement="bottom" arrow={{ pointAtCenter: true }}>
-                                <Button className="mr-3 bg-[#032541] text-white hover:!bg-gray-800">Teleko'rsatuvlar</Button>
+                                <Button className="mr-3 bg-[#032541] text-white hover:!bg-[#032541] !border-none">TV Shows</Button>
                             </Dropdown>
                             <Dropdown menu={{ items: personItems }} placement="bottom" arrow={{ pointAtCenter: true }}>
-                                <Button className="mr-3 bg-[#032541] text-white hover:!bg-gray-800">Kishilar</Button>
+                                <Button className="mr-3 bg-[#032541] text-white hover:!bg-[#032541] !border-none">Kishilar</Button>
                             </Dropdown>
                             <Dropdown menu={{ items: moreItems }} placement="bottom" arrow={{ pointAtCenter: true }}>
-                                <Button className="bg-[#032541] text-white hover:!bg-gray-800">Yana</Button>
+                                <Button className="bg-[#032541] text-white hover:!bg-[#032541] !border-none">Yana</Button>
                             </Dropdown>
-                            {/* <Popover placement="bottom" title={text} content={content}>
-                                <Button>Bottom</Button>
-                            </Popover> */}
                         </div>
+
                     </div>
                     <div className='flex cursor  gap-4 text-white text-[18px] items-center '>
                         <FaPlus className=' cursor text-[25px] text-white' />

@@ -3,15 +3,19 @@ import React, { useEffect, useState } from 'react';
 import Card from '../../components/Card';
 import { apiClient } from '../../Utils/api';
 import { useNavigate } from 'react-router-dom';
+import { Pagination } from 'antd';
 
 export default function TaniqliKishilar() {
     const [data, setData] = useState([]);
     const navigate = useNavigate();
+    const [page, setPage] = useState(1);
+    const [Total, setTotal] = useState(0);
 
     const getPeopleList = async () => {
         try {
-            let res = await apiClient.get('person/popular?language=en-US&page=1');
+            let res = await apiClient.get(`person/popular?language=en-US&page=${page}`);
             setData(res.data.results);
+            setTotal(res.data.total_results);
         } catch (error) {
             console.error('Error fetching data:', error);
         }
@@ -19,7 +23,7 @@ export default function TaniqliKishilar() {
 
     useEffect(() => {
         getPeopleList();
-    }, []);
+    }, [page]);
 
     return (
         <div className="mt-8 mb-8">
@@ -37,6 +41,15 @@ export default function TaniqliKishilar() {
                         />
                     </div>
                 ))}
+            </div>
+            <div className='container flex justify-center' style={{ marginTop: "40px", marginBottom: "30px" }}>
+                <Pagination
+                    total={Total}
+                    current={page}
+                    onChange={(page) => setPage(page)}
+                    pageSize={20}
+                    showSizeChanger={false}
+                />
             </div>
         </div>
     );

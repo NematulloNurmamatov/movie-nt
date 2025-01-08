@@ -1,3 +1,4 @@
+import { Progress } from 'antd';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -11,7 +12,7 @@ export default function Card({ id, ism, img_src, describe }) {
     return (
         <div
             onClick={handleCardClick}
-            className="w-full h-auto border rounded-lg p-4 shadow transition-transform duration-300 hover:scale-105 cursor-pointer"
+            className="w-full h-auto border rounded-lg p-4 shadow transition-transform duration-300 hover:shadow-lg cursor-pointer"
         >
             <img
                 src={img_src ? `https://image.tmdb.org/t/p/w500${img_src}` : 'https://via.placeholder.com/150'}

@@ -2,9 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.custom-progress .ant-progress-text {
+    color: white !important;
+}
+
+
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     width: 90%;
     margin: 0 auto;
-    /* color: #188418; */
+    /* color: #151515; */
+}
+
+body {
+    background-color: azure;
 }

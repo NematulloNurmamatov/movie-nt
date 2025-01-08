@@ -6,6 +6,8 @@ import "./index.css"
 import Home from './pages/Home.jsx';
 import TaniqliKishilar from './pages/People/TaniqliKishilar.jsx';
 import PersonDetail from './pages/People/PersonDetail.jsx'; // Dinamik sahifa
+import MovieList from './pages/Movie/MovieList.jsx';
+import Tv from './pages/TvShows/Tv.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -15,7 +17,9 @@ createRoot(document.getElementById('root')).render(
           <Route path="/" element={<Home />} />
           <Route path="taniqlikishilar" element={<TaniqliKishilar />} />
           <Route path="person/:id" element={<PersonDetail />} /> {/* To'g'ri dinamik marshrut */}
-          
+          <Route path="movie/:type" element={<MovieList />} />
+          <Route path="tv/:type" element={<Tv />} />
+
           <Route path="*" element={<h1>Error page</h1>} />
         </Route>
       </Routes>
