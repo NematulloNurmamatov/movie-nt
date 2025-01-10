@@ -215,8 +215,8 @@ function Tv() {
                         <div key={item.id} className="shadow-md rounded-lg overflow-hidden">
                             <MovieCard
                                 src={item.poster_path}
-                                title={item.title}
-                                release_date={item?.release_date}
+                                title={item.name}
+                                release_date={item?.first_air_date}
                                 vote_average={item?.vote_average}
                             />
                         </div>
