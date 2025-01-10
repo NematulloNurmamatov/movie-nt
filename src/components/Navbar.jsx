@@ -138,7 +138,7 @@ export default function Navbar() {
         <div>
             <nav className="border-gray-200 bg-[#032541]">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                    <div className="flex gap-10">
+                    <div className="flex gap-10 items-center">
                         <Link to={"/"}>
                             <img className="w-[140px]" src={logo} alt="Logo" />
                         </Link>

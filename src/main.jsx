@@ -18,7 +18,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="taniqlikishilar" element={<TaniqliKishilar />} />
           <Route path="person/:id" element={<PersonDetail />} /> {/* To'g'ri dinamik marshrut */}
           <Route path="movie/:type" element={<MovieList />} />
-          <Route path="tv/:type" element={<Tv />} />
+          <Route path="tv/:type" element={<Tv /> } />
 
           <Route path="*" element={<h1>Error page</h1>} />
         </Route>

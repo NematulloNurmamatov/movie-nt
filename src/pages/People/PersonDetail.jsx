@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { apiClient } from '../../Utils/api';
+import ThreeDot from "../../components/ThreeDot";
+
+
 
 export default function PersonDetail() {
     const { id } = useParams();
@@ -39,8 +42,12 @@ export default function PersonDetail() {
         fetchCombinedCredits();
     }, [id]);
 
-    if (!person) return <div>Loading...</div>;
-
+    if (!person)
+        return (
+            <div className="flex items-center justify-center h-screen">
+                <ThreeDot color="#32cd32" size="large" text="" textColor="" />
+            </div>
+        );
     return (
         <div className="container mx-auto mt-8 p-4">
             <div className="flex flex-col md:flex-row gap-8">
