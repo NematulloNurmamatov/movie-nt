@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { apiClient } from "../../Utils/api";
 import MovieCard from "../../components/MovieCard/MovieCard";
 import { Pagination, Select, Radio, Checkbox, Collapse, Slider, Input } from "antd";
+import { Link } from 'react-router-dom';
+
 
 const { Panel } = Collapse;
 const { Option } = Select;
@@ -24,12 +26,17 @@ function MovieList() {
     const params = useParams();
 
     const getMovieList = async () => {
-        const res = await apiClient.get(
-            `movie/${params.type}?language=en-US&page=${page}`
-        );
-        setTotalPages(res.data.total_pages);
-        setData(res.data.results);
+        try {
+            const res = await apiClient.get(
+                `movie/${params.type}?language=en-US&page=${page}`
+            );
+            setTotalPages(res.data.total_pages);
+            setData(res.data.results);
+        } catch (error) {
+            console.error("API so'rovi xato:", error);
+        }
     };
+
 
     useEffect(() => {
         getMovieList();
@@ -212,16 +219,22 @@ function MovieList() {
                 {/* Movie Cards */}
                 <div className="col-span-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {data?.map((item) => (
-                        <div key={item.id} className="shadow-md rounded-lg overflow-hidden">
-                            <MovieCard
-                                src={item.poster_path}
-                                title={item.title}
-                                release_date={item?.release_date}
-                                vote_average={item?.vote_average}
-                            />
-                        </div>
+                        <Link key={item.id} to={`/movie/${params.type}/${item.id}`} className="block">
+                            <div className="shadow-md rounded-lg overflow-hidden">
+                                <MovieCard
+                                    src={item.poster_path}
+                                    title={item.title}
+                                    release_date={item?.release_date}
+                                    vote_average={item?.vote_average}
+                                />
+                            </div>
+                        </Link>
                     ))}
                 </div>
+
+
+
+
             </div>
 
             {/* Pagination */}

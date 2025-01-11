@@ -48,6 +48,7 @@ export default function PersonDetail() {
                 <ThreeDot color="#32cd32" size="large" text="" textColor="" />
             </div>
         );
+        
     return (
         <div className="container mx-auto mt-8 p-4">
             <div className="flex flex-col md:flex-row gap-8">
